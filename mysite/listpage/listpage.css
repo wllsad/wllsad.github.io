@@ -1,67 +1,158 @@
-@font-face {
-    font-family: "lishu";
-    src: url(../listpage/隶书简体/隶书.ttf);
-}
 *{
     margin: 0px;
     padding: 0px;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: '隶书';
+    src: url(../隶书简体/隶书.ttf);
 }
 html{
-    width: 100%;
     height: 100%;
 }
 body{
-    font-family: "lishu";
-   
-    width: 100%;
+    font-family: '隶书';
     height: 100%;
-    background: linear-gradient(90deg, rgba(217,231,255,1) 4%, rgba(227,255,231,1) 100%);
+    background-image: url(../images/cool-background\ \(3\).png);
   
 }
-.common,.recommand{
-    margin: 30px auto;
-    width: 80%;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 15px;
+.nav{
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(75, 121, 116, 0.6);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+}
+ul.navlist{
+    width: 100%;
+    height: 100%;
+}
+ul.navlist li{
+    float: left;
+}
+ul.navlist div{
+    margin-right: 30%;
+    float: left;
+    height: 60px;
+    width: 20%;
+    display: flex;
     justify-content: space-around;
-    align-items: center;
 }
-h1{
-    margin: 20px 0px;
+ul.navlist div img{
+    margin-top: 6px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
-.list{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
+ul.navlist div p{
+    font-size: 30px;
+    line-height: 60px;
 }
-.list li{
-    width: 250px;
-    
-}
-.list li a{
+ul.navlist li a{
     display: block;
-    width: 250px;
-    height: 250px;
-}
-.list li a img{
-    border-radius: 10px;
-    width:250px;
-    height: 250px;
-}
-.list li h2{
+    height: 60px;
+    width: 120px;
     text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
 
+.container{
+    width: 90%;
+    /* height: 600px; */
+    margin: 70px auto 0px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+}
+.leftbox{
+    width: 60%;
+    /* height: 100%; */
+    /* border: 1px solid blue; */
+    /* padding: 0px 0px 10px; */
+}
+.leftbox .card{
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 165px;
+    margin: 20px auto;
+    /* border: 1px solid red; */
+    border-radius: 15px;
+    background-color: rgba(75, 121, 116, 0.2);
+    overflow: hidden;
+}
+.leftbox .card .left{
+    width: 30%;
+    height: 100%;
+    
+}
+.leftbox .card .left img{
+    width: 100%;
+    height: 100%;
+}
+.leftbox .card .right{ 
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.leftbox .card .right h3{
+    font-size: 25px;
+}
+.leftbox .card .right p{
+    font-size: 18px;
+}
+.leftbox .card .right .desc{
+    height: 20px;
+    width: 100%;
+ 
+    margin: 8px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rightbox{
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rightbox h2{
+    margin: 25px 0px;
+}
+.rightbox form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .form{
-    width: 80%;
-    height: 300px;
-    margin: 30px auto;
-    border: 1px solid red;
+    position: fixed;
+    width: 27%;
+    right: 100px;
+    top: 70px;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.del{
+    bottom: 10px;
+    right: 15px;
+    position: absolute;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(75, 121, 116, 0.3);
+}
+.del:hover{
+    color: white;
 }
