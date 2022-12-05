@@ -13,6 +13,7 @@ html{
 }
 body{
     background-image: url(./images/cool-background\ \(3\).png);
+    position: relative;
 }
 
 
@@ -28,6 +29,7 @@ body{
     float:left;
     width: 150px;
     height: 65px;
+    list-style: none;
 }
 .nav .navlist .one a{
     width: 100%;
@@ -45,7 +47,7 @@ body{
 
 .container{
     width: 80%;
-    height: 500px;
+    height: 550px;
   
     margin: 100px auto;
     background-color: rgba(255,255,255,0.5);
@@ -71,6 +73,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     
 }
 /* .leftbox{
@@ -105,5 +108,32 @@ main h2{
 main p{
     font-size: 18px;
     letter-spacing: 3px;
+}
+.change{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: none;
+    background-color: rgba(75, 121, 116, 0.6);
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+.change:hover{
+    color: white;
+}
+.form{
+    z-index: 1;
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    
+}
+.form h2{
+    margin: 20px 0px;
 }
 

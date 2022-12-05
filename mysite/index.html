@@ -9,8 +9,8 @@
 </head>
 <body>
   <script>
-    var url=location.href
-    var id=url.charAt(url.length-1)
+    var url=location.href;
+    let id=url.substring(url.indexOf("#")+1);
     
     
     for(let i =0;i<localStorage.length;i++){
@@ -30,9 +30,12 @@
     let main=obj.foodmain
     let img=obj.foodimg
     let hotel=obj.foodrestaurant
-    
-    
 
+
+    $.ajaxSettings.async = false;
+    
+    
+   
 
 
 
@@ -46,6 +49,45 @@
       $("body").html(result)
       
     })
+
+    
+   
+
+    
+
+    // window.onload=function(){
+    
+    
+    $("#change").click(function(){
+    var newstar=$("#star").val()
+    var newhotel=$("#hotel").val()
+    var newimg=$("#img").val()
+    var newmain=$("#main").val()
+      for(let i =0;i<localStorage.length;i++){
+                  
+       let food=localStorage.key(i);
+       let foodobj=JSON.parse(localStorage.getItem(food));
+       if(id==foodobj.foodid){
+        foodobj.foodstar=newstar
+        foodobj.foodimg=newimg
+        foodobj.foodrestaurant=newhotel
+        foodobj.foodmain=newmain
+        localStorage.removeItem(food)
+        localStorage.setItem(food,JSON.stringify(foodobj))
+        $(".form").css("visibility","hidden")
+        location.reload()
+
+        break
+       }
+      
+      }
+
+    })
+    $(".change").click(function(){
+      $(".form").css("visibility","visible")
+    })
+    // }
+    
     
   </script>
 </body>

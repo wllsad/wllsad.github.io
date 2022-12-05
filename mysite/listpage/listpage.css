@@ -40,6 +40,7 @@ ul.navlist{
 }
 ul.navlist li{
     float: left;
+    list-style-type: none;
 }
 ul.navlist div{
     margin-right: 30%;
@@ -88,7 +89,7 @@ ul.navlist li a{
     position: relative;
     display: flex;
     width: 90%;
-    height: 165px;
+    height: 175px;
     margin: 20px auto;
     /* border: 1px solid red; */
     border-radius: 15px;
