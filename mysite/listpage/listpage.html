@@ -30,7 +30,7 @@
             <div class="leftbox">
                 <div class="card">
                     <div class="left">
-                        <a href="../马拉糕详情页/马拉糕详情页.html"><img src="../images/马拉糕.jpg" alt=""></a>
+                        <a href="../马拉糕详情页/马拉糕详情页.html#id=3"><img src="../images/马拉糕.jpg" alt=""></a>
                     </div>
                     <div class="right">
                         <h2>马拉糕</h2>
@@ -191,36 +191,53 @@
                 <button id="btn">添加</button> -->
                 
             </div>
+            
             <div class="form">
-                <h2>搜索美食</h2>
-                <input type="text" id="#search"><br>
+                <!-- <h2>搜索美食</h2>
+                <input type="text" id="#search"><br> -->
                 <h2>添加更多美食</h2>
                 
                     美食名称：<br>
-                <input type="text" id="foodname"><br>
+                <input type="text" id="foodname">
                 美食图片地址：<br>
-                <input type="text" id="foodimg"><br>
+                <input type="text" id="foodimg">
                 美食的推荐等级：<br>
                 <select id="foodstar">
                     <option value="三星">三星</option>
                     <option value="四星">四星</option>
                     <option value="五星">五星</option>
                 </select><br>
+                
                 美食的推荐餐厅：
-                <input type="text" id="foodrestaurant"><br>
+                <input type="text" id="foodrestaurant">
                 美食的简单描述：<br>
-                <textarea id="fooddescription" cols="30" rows="10"></textarea><br>
+                <textarea id="fooddescription" cols="25" rows="5" placeholder="此描述在列表页中显示"></textarea><br>
+                <!-- <button id="btn">添加</button> -->
+                <h2>为美食添加一篇博文</h2>
+                为美食博文设置一个id:<br>
+                <input type="text" id="foodid" placeholder="请输入一个数字">
+                设置美食博文的正文：<br>
+                <textarea id="foodmain" cols="30" rows="10" placeholder="正文将会在博文页面显示，点击列表页中美食的标题即可进入博文页"></textarea>
                 <button id="btn">添加</button>
             </div>
         </div>
 
 
         <script>
-            var foodlist=["马拉糕","黄金糕","芋头糕","杏仁饼","老婆饼","萝卜糕"]
+            // var foodlist=["马拉糕","黄金糕","芋头糕","杏仁饼","老婆饼","萝卜糕"]
+            
             
             $(document).ready(function(){
+                localStorage.removeItem('Hm_lvt_d7c7037093938390bc160fc28becc542')
                 for(let i =0;i<localStorage.length;i++){
+                  
                     let food=localStorage.key(i);
+                   
+                    // if(food.startsWith('Hm')){
+                    //     console.log(11111)
+                    // }
+                   
+                    // console.log(food)
                     let foodobj=JSON.parse(localStorage.getItem(food));
                     // if(foodobj.length!=5){
                     //     continue
@@ -231,7 +248,10 @@
                     let foodrestaurant=foodobj.foodrestaurant;
                     let foodimg=foodobj.foodimg;
                     let foodstar=foodobj.foodstar
-                    foodlist.push(foodname)
+                    let foodid=foodobj.foodid
+                    let foodmain=foodobj.foodmain
+                    console.log(foodid)
+                    // foodlist.push(foodname)
                     
                     
                    
@@ -241,7 +261,7 @@
                         <img src="${foodimg}" alt="">
                     </div>
                     <div class="right">
-                        <h2> ${foodname} </h2>
+                        <h2><a href="../index.html#${foodid}">${foodname}</a></h2>
                         <div class="desc">
                             <div class="star">美食星级：<span>${foodstar}</span></div>
                             <div class="resturant">推荐餐厅：<span>${foodrestaurant}</span></div>
@@ -249,6 +269,7 @@
                         </div>
                         <p>${fooddescription}</p>
                         <button class="del">delete</button>
+                        
                     </div>
                     
                 </div>`;
@@ -272,19 +293,23 @@
                     let foodimg=$("#foodimg").val()
                     let fooddescription=$("#fooddescription").val()
                     let foodstar=$("#foodstar").find("option:selected").val()
+                    let foodid=$("#foodid").val()
+                    let foodmain=$("#foodmain").val()
                     localStorage.setItem(foodname,JSON.stringify({
                         foodname:foodname,
                         foodimg:foodimg,
                         foodrestaurant:foodrestaurant,
                         fooddescription:fooddescription,
-                        foodstar:foodstar
+                        foodstar:foodstar,
+                        foodid:foodid,
+                        foodmain:foodmain
                     }))
                     let newcard=`<div class="card">
                     <div class="left">
                         <img src="${foodimg}" alt="">
                     </div>
                     <div class="right">
-                        <h2> ${foodname} </h2>
+                        <h2> <a href="../index.html#${foodid}">${foodname}</a> </h2>
                         <div class="desc">
                             <div class="star">美食星级：<span>${foodstar}</span></div>
                             <div class="resturant">推荐餐厅：<span>${foodrestaurant}</span></div>
@@ -303,6 +328,8 @@
                     $("#foodimg").val("")
                     $("#fooddescription").val("")
                     $("#foodstar").find("option:selected").val("")
+                    $("#foodid").val("")
+                    $("#foodmain").val("")
                    
 
                 })
@@ -313,10 +340,10 @@
                     $(this).parent().parent().remove()
                 })
 
-                $("#search").click(function(){
-                    let searchvalue=$(this).val
-                    console.log(searchvalue)
-                })
+                // $("#search").click(function(){
+                //     let searchvalue=$(this).val
+                //     console.log(searchvalue)
+                // })
                 
  
         });

@@ -3,6 +3,13 @@
     padding: 0px;
     list-style-type: none;
     box-sizing: border-box;
+    text-decoration: none;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: white;
 }
 @font-face {
     font-family: '隶书';
@@ -156,3 +163,5 @@ ul.navlist li a{
 .del:hover{
     color: white;
 }
+
+
