@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "lishu";
+    src: url(../隶书简体/隶书.ttf);
+   }
+html{
+    font-family: "lishu";
+}
+*{ 
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    background-image: url(../images/cool-background\ \(3\).png);
+    position: relative;
+}
+
+.nav{
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(75, 121, 116, 0.6);
+    display: flex;
+    justify-content: center;
+}
+ul.navlist{
+    width: 100%;
+    height: 100%;
+}
+ul.navlist li{
+    float: left;
+}
+ul.navlist div{
+    margin-right: 30%;
+    float: left;
+    height: 60px;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+ul.navlist div img{
+    margin-top: 6px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+ul.navlist div p{
+    font-size: 30px;
+    line-height: 60px;
+}
+ul.navlist li a{
+    display: block;
+    height: 60px;
+    width: 120px;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+
+.container{
+    width: 80%;
+    height: 550px;
+  
+    margin: 100px auto;
+    background-color: rgba(255,255,255,0.5);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.img{
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.leftbox,.rightbox{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    word-break: break-all;
+}
+/* .leftbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.leftbox h2{
+    margin: 25px 0px 0px;
+}
+.ziduan{
+    font-size: 18px;
+    margin: 20px 0px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+.list li{
+    margin: 10px 0px 20px;
+}
+.list li a{
+    font-size: 18px;
+    text-decoration: underline;
+}
+main{
+    width: 80%;
+    text-align: center;
+}
+main h2{
+    margin: 25px 0px 15px;
+}
+main p{
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+.change{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: none;
+    background-color: rgba(75, 121, 116, 0.6);
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+.change:hover{
+    color: white;
+}
+.form{
+    z-index: 1;
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    
+}
+.form h2{
+    margin: 20px 0px;
+}
+

@@ -42,16 +42,14 @@ window.onload=function(){
         }
         
     }
-    // for(var i=0;i<navli.length;i++){
-    //     navli.num=i;
-    //     navli[i].onclick=function(){
-    //         document.querySelector("li.active").className=" ";
-    //         this.className="active";
-    //         index=this.num;
-    //         container.style.top=-index*viewheight+"px";
+    
+    
+       
+
+    
 
 
-    //     }
-    // }
+
+    
 
 }

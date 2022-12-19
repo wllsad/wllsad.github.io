@@ -135,18 +135,14 @@ ul.navlist li a{
     align-items: center;
 }
 .rightbox h2{
-    margin: 25px 0px;
+    margin: 25px 0px 5px;
 }
-.rightbox form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .form{
     position: fixed;
     width: 27%;
     right: 100px;
-    top: 70px;
+    top:40px;
     /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
