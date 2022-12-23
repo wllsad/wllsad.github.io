@@ -2,6 +2,14 @@
     font-family: "lishu";
     src: url(../隶书简体/隶书.ttf);
 }
+@font-face {
+    font-family: "RainbowParty";
+    src: url(../英语字体/Rainbow-Party/Rainbow-Party-2.ttf);
+}
+.nav .navlist li:nth-of-type(1){
+
+    font-family: "RainbowParty" !important;
+}
 *{
     margin: 0px;
     padding: 0px;
