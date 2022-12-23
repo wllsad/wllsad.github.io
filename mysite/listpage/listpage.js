@@ -174,12 +174,13 @@ $(document).ready(function(){
         $("#foodid").val("")
         $("#foodmain").val("")   
     })
+    
 
-    // $(".del").click(function(){
-    //     let name=$(this).siblings()[0].innerText
-    //     localStorage.removeItem(name)
-    //     $(this).parent().parent().remove()
-    // })
+    $(".del").click(function(){
+        let name=$(this).siblings()[0].innerText
+        localStorage.removeItem(name)
+        $(this).parent().parent().remove()
+    })
 
 
     
